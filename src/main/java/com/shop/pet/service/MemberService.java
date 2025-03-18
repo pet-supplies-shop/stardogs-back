@@ -12,6 +12,8 @@ import com.shop.pet.dto.Login;
 import com.shop.pet.dto.Member;
 import com.shop.pet.util.OpenCrypt;
 
+//회원 관련 로직 처리
+
 @Service
 public class MemberService {
 	@Autowired
@@ -40,16 +42,16 @@ public class MemberService {
 				String myToken=OpenCrypt.byteArrayToHex(originalHash);
 				System.out.println("myToken : "+myToken);
 				
+				//로그인 정보 객체 생성
 				Login loginInfo = new Login(email, myToken, name, new Date());
 				loginDao.insertToken(loginInfo);
 				return loginInfo;
 			}
 		}
-		
 		return null;		 
 	}
 	
-	//회원 로그인
+	//로그인
 	public Member login(Member m) throws Exception {
 		return memberDao.login(m);
 	}
@@ -70,7 +72,7 @@ public class MemberService {
 		memberDao.deleteMember(email);
 	}
 	
-	//회원 로그아웃
+	//로그아웃
 	public void logout(String authorization) throws Exception {
 		//토큰을 받아서 DB에서 해당 토큰 삭제
 		loginDao.deleteToken(authorization);

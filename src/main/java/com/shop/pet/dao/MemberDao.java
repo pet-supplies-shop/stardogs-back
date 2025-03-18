@@ -15,6 +15,8 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.shop.pet.dto.Member;
 
+//회원 관련 DB 연산
+
 @Mapper
 public interface MemberDao {
 	public Member login(Member m) throws Exception;
