@@ -6,7 +6,7 @@
 <mapper namespace="com.shop.pet.dao.LoginDao">
 
   <select id="checkToken" parameterType="String" resultType="Login">
-  	select * from login where token=#{token}
+  	select * from login where token = #{token}
   </select>
   
   <insert id="insertToken" parameterType="Login">
@@ -14,7 +14,7 @@
   </insert>
   
   <delete id="deleteToken" parameterType="String">
-  	delete from login where token=#{token}
+  	delete from login where token = #{token}
   </delete>
   
 </mapper>

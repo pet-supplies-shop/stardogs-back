@@ -10,7 +10,7 @@
   </select>
   
   <insert id="insertMember" parameterType="Member">
-  	insert into member(email, pwd, name) values(#{email},#{pwd},#{name})
+  	insert into member(email, pwd, name) values(#{email}, #{pwd}, #{name})
   </insert>
   
   <update id="updateMember" parameterType="Member">
