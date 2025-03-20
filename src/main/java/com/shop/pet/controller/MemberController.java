@@ -25,7 +25,7 @@ public class MemberController {
 	//로그아웃
 	@PostMapping("logout")
 	public void logout(@RequestHeader String authorization) { //request 헤더로 들어옴
-		System.out.println(authorization);
+		//System.out.println(authorization);
 		try {
 			//토큰 삭제
 			memberService.logout(authorization);
@@ -100,7 +100,7 @@ public class MemberController {
 	//회원 정보 수정
 	@PostMapping("updateMember")
 	public String updateMember(@RequestBody Member m) {
-		System.out.println(m);
+		//System.out.println(m);
 		try {
 			memberService.updateMember(m);
 			return "ok";
@@ -113,7 +113,7 @@ public class MemberController {
 	//회원 삭제
 	@PostMapping("deleteMember")
 	public String deleteMember(@RequestBody String email) {
-		System.out.println("삭제 요청된 email" + email);
+		//System.out.println("삭제 요청된 email" + email);
 		try {
 			memberService.deleteMember(email);
 			return email + "회원 삭제됨";

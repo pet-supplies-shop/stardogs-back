@@ -10,7 +10,7 @@
   </select>
   
   <select id="getProductsByCategory" resultType="Product" parameterType="String" >
-        SELECT * FROM product WHERE prodClass = #{prodClass}
+        select * from product where prodClass = #{prodClass}
     </select>
   
 </mapper>

@@ -30,7 +30,7 @@ public class ProductController {
     // 특정 prodClass에 해당하는 상품 조회
     @GetMapping("/class/{prodClass}")
     public List<Product> getProductsByClass(@PathVariable String prodClass) {
-    	System.out.println(prodClass);
+    	//System.out.println(prodClass);
         return productService.getProductsByClass(prodClass);
     }
 }
