@@ -32,4 +32,6 @@ public class PetController {
 			return "애견 정보 등록 실패";
 		}
 	}
+	
+	
 }
