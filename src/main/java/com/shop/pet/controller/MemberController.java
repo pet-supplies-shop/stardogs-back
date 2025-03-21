@@ -42,7 +42,8 @@ public class MemberController {
 		
 		Map<String,String> responseMap = new HashMap<>();
 		
-		try { //loginInfo에 email, token, name 들어가 있음
+		 //loginInfo에 email, token, name 들어가 있음
+		try {
 			Login loginInfo = memberService.tokenLogin(m);
 			
 			//로그인 성공 시 이름, 토큰 반환
@@ -55,30 +56,6 @@ public class MemberController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseMap.put("msg", "exception!");
-		}
-		return responseMap;
-	}
-	
-	//일반 로그인
-	@PostMapping("login")
-	public Map<String,String> login(@RequestBody Member m) {
-		//System.out.println(m);
-		
-		Map<String,String> responseMap=new HashMap<>();
-		
-		try {
-			m = memberService.login(m);
-			String name = m.getName();
-			
-			//로그인 성공 시 이름 반환
-			if(m!=null && name!=null && !name.trim().equals("")) {
-				responseMap.put("name", name);
-			}else {
-				responseMap.put("msg", "다시 로그인 해주세요");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			responseMap.put("msg", "Exception!");
 		}
 		return responseMap;
 	}

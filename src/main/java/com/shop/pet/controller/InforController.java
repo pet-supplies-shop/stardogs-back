@@ -15,7 +15,8 @@ import com.shop.pet.service.InforService;
 @RestController
 @RequestMapping("/infor")
 @CrossOrigin("http://127.0.0.1:5500/")
-//    http://localhost:8080/infor/getAllInfor/{email}
+
+//http://localhost:8080/infor/getAllInfor/{email}
 public class InforController {
 	@Autowired
 	private InforService inforService;

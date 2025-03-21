@@ -3,7 +3,6 @@ package com.shop.pet.dto;
 import java.util.Date;
 
 //사용자 정보 저장
-
 public class Member {
 	
 	private String email, pwd, name;

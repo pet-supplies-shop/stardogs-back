@@ -25,7 +25,6 @@ public class Infor {
 
 	public Infor() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getName() {

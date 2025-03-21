@@ -3,7 +3,6 @@ package com.shop.pet.dto;
 import java.util.Date;
 
 //로그인 정보 저장
-
 public class Login {
 	
 	private String email, token, name;
